@@ -37,4 +37,6 @@ runs:
         find ../.. -exec ls -ald {} +
         echo "SET"
         set
+        echo "FIND THE SOURCE"
+        find ../../.. -name sourcefile -exec ls -ald {} +
       shell: bash
