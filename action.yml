@@ -1,0 +1,15 @@
+name:            "Test Action"
+description:     "This is a simple test action"
+
+inputs:
+  text:
+    required:    true
+    description: "Just some random text"
+
+runs:
+  using:         "composite"
+  steps:
+    - run: |
+      echo "${{ github.actor }} on ${{ runner.os }}"
+      echo "Text: ${{ inputs.text }}"
+    shell: bash
