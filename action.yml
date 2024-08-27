@@ -21,3 +21,13 @@ runs:
         THE_TEXT: ${{ inputs.text }}
       run: echo "Text ${THE_TEXT}"
       shell: bash
+
+    - name: "ls"
+      run: |
+        ls
+      shell: bash
+
+    - name: "git status"
+      run: |
+        git status
+      shell: bash
