@@ -9,7 +9,15 @@ inputs:
 runs:
   using:         "composite"
   steps:
-    - run: echo "${{ github.actor }} on ${{ runner.os }}"
+    - name: "Say stuff"
+      env:
+        GITHUB_ACTOR: ${{ github.actor }}
+        GITHUB_OS:    ${{ runner.os }}
+      run: echo "${GITHUB_ACTOR} on ${GITHUB_OS}"
       shell: bash
-    - run: echo "Text: ${{ inputs.text }}"
+
+    - name: "Text out"
+      env:
+        THE_TEXT: ${{ inputs.text }}
+      run: echo "Text: ${THE_TEXT}"
       shell: bash
