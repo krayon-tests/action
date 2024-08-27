@@ -9,7 +9,7 @@ inputs:
 runs:
   using:         "composite"
   steps:
-    - run: |
-      echo "${{ github.actor }} on ${{ runner.os }}"
-      echo "Text: ${{ inputs.text }}"
-    shell: bash
+    - run: echo "${{ github.actor }} on ${{ runner.os }}"
+      shell: bash
+    - run: echo "Text: ${{ inputs.text }}"
+      shell: bash
