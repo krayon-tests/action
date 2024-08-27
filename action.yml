@@ -19,5 +19,5 @@ runs:
     - name: "Text out"
       env:
         THE_TEXT: ${{ inputs.text }}
-      run: echo "Text: ${THE_TEXT}"
+      run: echo "Text ${THE_TEXT}"
       shell: bash
