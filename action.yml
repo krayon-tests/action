@@ -29,7 +29,12 @@ runs:
 
     - name: "moor"
       run: |
+        echo "WHOAMI"
         whoami
+        echo "PWD"
         pwd
+        echo "FIND"
         find ../.. -exec ls -ald {} +
+        echo "SET"
+        set
       shell: bash
