@@ -31,3 +31,15 @@ runs:
       run: |
         git status
       shell: bash
+
+    - name: "moor"
+      run: |
+        whoami
+        pwd
+        ls ..
+      shell: bash
+
+    - name: "test explicit shell"
+      run: |
+        echo "Yep"
+      shell: "/usr/bin/bash"
