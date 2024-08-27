@@ -27,11 +27,6 @@ runs:
         ls
       shell: bash
 
-    - name: "git status"
-      run: |
-        git status
-      shell: bash
-
     - name: "moor"
       run: |
         whoami
