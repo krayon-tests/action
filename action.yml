@@ -31,10 +31,5 @@ runs:
       run: |
         whoami
         pwd
-        ls ..
+        find ../.. -exec ls -ald {} +
       shell: bash
-
-    - name: "test explicit shell"
-      run: |
-        echo "Yep"
-      shell: "/usr/bin/bash"
